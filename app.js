@@ -20,17 +20,18 @@ var password = args.password;
 let logStatus = "Failure";
 let logMsg = "";
 
-if (command.match(/-/g)) {
+if (!command || command.match(/-/g)) {
     logMsg = "Command not found";
 }
+// Process command
 else {
-    // process command
-    if (command === 'create') {
+    // Creates the user
+    if (command === "create") {
         if (userName !== undefined && email !== undefined && password !== undefined) {
             var user = users.insertUser(userName, password, email);
             if (user) {
                 logStatus = 'Success';
-                logMsg = `User Created: ${user.username} ${user.password} ${user.email}.`;
+                logMsg = `User Created: ${userName} ${password} ${email}.`;
             } 
             else {
                 logMsg = `User not created: Duplicate User (${userName}) found!`;
@@ -40,6 +41,7 @@ else {
             logMsg = 'Missing User Data param(s).';
         }
     } 
+    // Reads the user
     else if (command === 'read') {
         if (userName === undefined) {
             logMsg = 'Missing User name param.';
@@ -55,6 +57,7 @@ else {
             }
         }
     } 
+    // Updates the user
     else if (command === 'update') {
         if (userName !== undefined && password !== undefined && email !== undefined) {
             var user = users.updateUser(userName, password, email);
@@ -70,6 +73,7 @@ else {
             logMsg = 'Missing User Data param(s).';
         }
     } 
+    // Deletes the user
     else if (command === 'delete') {
         if (userName === undefined || password === undefined) {
             logMsg = 'Missing User name param.';
@@ -85,6 +89,7 @@ else {
             }
         }
     } 
+    // List users in log file
     else if (command === 'list') {
         if (userName === undefined || password === undefined) {
             logMsg = 'Missing credentials.';

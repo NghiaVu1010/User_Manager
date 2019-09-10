@@ -1,0 +1,14 @@
+
+info [Tue Sep 10 2019 10:27:17 GMT-0400 (Eastern Daylight Time)]  App accessed by Training: Success - User Created: undefined undefined undefined.
+
+info [Tue Sep 10 2019 10:35:59 GMT-0400 (Eastern Daylight Time)]  App accessed by Training: Failure - User not created: Duplicate User (Bar) found!
+
+info [Tue Sep 10 2019 10:36:18 GMT-0400 (Eastern Daylight Time)]  App accessed by Training: Failure - User not created: Duplicate User (Bar) found!
+
+info [Tue Sep 10 2019 10:37:32 GMT-0400 (Eastern Daylight Time)]  App accessed by Training: Failure - User not created: Duplicate User (Ba1r) found!
+
+info [Tue Sep 10 2019 10:37:44 GMT-0400 (Eastern Daylight Time)]  App accessed by Training: Success - User Created: undefined undefined undefined.
+
+info [Tue Sep 10 2019 10:43:14 GMT-0400 (Eastern Daylight Time)]  App accessed by Training: Success - Users:FooBar, foobar@test.com'; Ba1r, fobar@test.com'; 
+
+info [Tue Sep 10 2019 11:01:22 GMT-0400 (Eastern Daylight Time)]  App accessed by Training: Failure - Command not foundundefined

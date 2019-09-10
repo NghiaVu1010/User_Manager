@@ -18,7 +18,7 @@ var saveUsers = (users) => {
 };
 
 // Create user
-var inserUser = (username, password, email) => {
+var insertUser = (username, password, email) => {
     let users = getUsers();
 
     // Grab info
